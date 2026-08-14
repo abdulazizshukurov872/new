@@ -39,6 +39,7 @@ async def main():
     dp.callback_query.middleware(BlockMiddleware())
 
     dp.include_router(start.router)
+    dp.include_router(contact_admin.router)
     dp.include_router(menu.router)
     dp.include_router(auth.router)
     dp.include_router(favorites.router)
@@ -46,7 +47,6 @@ async def main():
     dp.include_router(location.router)
     dp.include_router(search.router)
     dp.include_router(booking.router)
-    dp.include_router(contact_admin.router)
     dp.include_router(reviews.router)
     dp.include_router(add_place.router)
     dp.include_router(admin_panel.router)
